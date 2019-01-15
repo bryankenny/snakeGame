@@ -28,14 +28,25 @@ function draw() {
        headY * blockSize,
       blockSize,
       blockSize)
-
   // update position of snakes head when key is pressed
   headX = headX + speedX
   headY = headY + speedY
+  // loop back inside the frame
+  if (headX < 0) {
+    headX = numOfBlocks
+  }
+  if (headX > numOfBlocks) {
+    headX = 0
+  }
+  if (headY < 0) {
+    headY = numOfBlocks
+  }
+  if (headY > numOfBlocks) {
+    headY = 0
+  }
 }
 
 function keyPressed() {
-
   if(key == 'w') {
     speedX = 0
     speedY = -1
