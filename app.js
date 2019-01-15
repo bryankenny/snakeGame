@@ -11,6 +11,16 @@ var headY = 0
 var speedX = 0
 var speedY = 0
 
+// snakeLength
+var tailLength = 3
+
+//tails contain old heads positions
+var tails = [];
+
+// apples position
+var appleX = 0
+var appleY = 0
+
 function setup() {
   createCanvas(400, 400);
   frameRate(10)
@@ -43,6 +53,19 @@ function draw() {
   }
   if (headY > numOfBlocks) {
     headY = 0
+  }
+  // add head to tails array
+  tails.push({x: headX, y: headY})
+  //remove first tails when its loo long
+  while(tails.length > tailLength) {
+    tails.shift()
+  }
+  // draw all positions in tails array as rectangles
+  for(var i = 0; i < tails.length; i++){
+    rect(tails[i].x * blockSize,
+         tails[i].y * blockSize,
+         blockSize,
+         blockSize)
   }
 }
 
