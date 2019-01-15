@@ -39,7 +39,7 @@ function setup() {
 }
 
 function draw() {
-  background(0, 0, 0)
+  background(66, 134, 244)
   // draw head
   fill(255)
   rect(headX * blockSize,
