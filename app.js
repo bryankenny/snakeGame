@@ -41,7 +41,7 @@ function setup() {
 function draw() {
   background(66, 134, 244)
   // draw head
-  fill(255)
+  fill(0, 209, 34)
   rect(headX * blockSize,
        headY * blockSize,
       blockSize,
@@ -116,7 +116,7 @@ function draw() {
     }
   }
   //draw score and high score
-  fill(255)
+  fill(0, 0, 0)
   text('score ' + score, 0, 10)
   text('highScore ' + highScore, 0, 20)
 }
