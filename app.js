@@ -70,7 +70,8 @@ function draw() {
          tails[i].y * blockSize,
          blockSize,
          blockSize)
-  }
+}
+
 
   //draw the apple
   fill(255, 0, 0)
@@ -78,7 +79,14 @@ function draw() {
        appleY * blockSize,
       blockSize,
       blockSize)
+  // when hitting the spple
+  if (headX ==appleX && headY == appleY) {
+    appleX = round(random(0, numOfBlocks - 1))
+    appleY = round(random(0, numOfBlocks - 1))
+    tailLength++
+  }
 }
+
 
 function keyPressed() {
   if(key == 'w') {
