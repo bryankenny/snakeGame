@@ -10,6 +10,10 @@ var headY = 0
 function setup() {
   createCanvas(400, 400);
   frameRate(10)
+
+  // head starts in the middle ofscreen
+  headX = numOfBlocks/2
+  headY = numOfBlocks/2
 }
 
 function draw() {
