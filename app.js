@@ -29,7 +29,7 @@ function setup() {
   headX = numOfBlocks/2
   headY = numOfBlocks/2
 
-  // pick random number between 0 and -1. (size of screen)
+  // pick andom number between 0 and -1. (size of screen)
   appleX = round(random(0, numOfBlocks - 1))
   appleY = round(random(0, numOfBlocks - 1))
 }
@@ -72,6 +72,12 @@ function draw() {
          blockSize)
   }
 
+  //draw the apple
+  fill(255, 0, 0)
+  rect(appleX * blockSize,
+       appleY * blockSize,
+      blockSize,
+      blockSize)
 }
 
 function keyPressed() {
