@@ -85,6 +85,15 @@ function draw() {
     appleY = round(random(0, numOfBlocks - 1))
     tailLength++
   }
+  // when the snakeis moving
+  if (speedX != 0 || speedY != 0) {
+    for(var i = 0; i < tails.length - 1; i++){
+      if(headX == tails[i].x && headY == tails[i].y) {
+        //the game ends now restart
+
+      }
+    }
+  }
 }
 
 
