@@ -21,6 +21,10 @@ var tails = [];
 var appleX = 0
 var appleY = 0
 
+// how many apples snake has eaten
+var highScore = 0;
+var score = 0;
+
 function setup() {
   createCanvas(400, 400);
   frameRate(10)
@@ -84,6 +88,7 @@ function draw() {
     appleX = round(random(0, numOfBlocks - 1))
     appleY = round(random(0, numOfBlocks - 1))
     tailLength++
+    score++
   }
   // when the snakeis moving
   if (speedX != 0 || speedY != 0) {
@@ -98,11 +103,22 @@ function draw() {
 
         tails = [];
         tailLength = 3;
-        appleX = round(random(0, numOfBlocks - 1))
-        appleY = round(random(0, numOfBlocks - 1))
+
+        appleX = round(random(0, numOfBlocks - 1));
+        appleY = round(random(0, numOfBlocks - 1));
+
+        //new highscore
+        if (score > highScore){
+          highScore = score
+        }
+        score = 0;
       }
     }
   }
+  //draw score and high score
+  fill(255)
+  text('score ' + score, 0, 10)
+  text('highScore ' + highScore, 0, 20)
 }
 
 
