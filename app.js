@@ -28,6 +28,10 @@ function setup() {
   // head starts in the middle ofscreen
   headX = numOfBlocks/2
   headY = numOfBlocks/2
+
+  // pick random number between 0 and -1. (size of screen)
+  appleX = round(random(0, numOfBlocks - 1))
+  appleY = round(random(0, numOfBlocks - 1))
 }
 
 function draw() {
@@ -67,6 +71,7 @@ function draw() {
          blockSize,
          blockSize)
   }
+
 }
 
 function keyPressed() {
