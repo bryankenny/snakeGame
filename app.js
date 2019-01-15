@@ -90,7 +90,16 @@ function draw() {
     for(var i = 0; i < tails.length - 1; i++){
       if(headX == tails[i].x && headY == tails[i].y) {
         //the game ends now restart
+        headX = numOfBlocks/2
+        headY = numOfBlocks/2
 
+        speedX = 0;
+        speedY = 0;
+
+        tails = [];
+        tailLength = 3;
+        appleX = round(random(0, numOfBlocks - 1))
+        appleY = round(random(0, numOfBlocks - 1))
       }
     }
   }
